@@ -26,7 +26,7 @@ class CicdApplicationTests {
 		val response: ResponseEntity<String> = template.getForEntity("/healthz", String::class.java)
 
 		// 실패하는 경우
-//		assertThat(response.body).isEqualTo("on failed")
+		assertThat(response.body).isEqualTo("on failed")
 
 		// 성공하는 경우
 		assertThat(response.body).isEqualTo("healthz-aws")
